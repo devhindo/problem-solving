@@ -6,6 +6,10 @@ int main() {
     int n;
     cin >> n;
     for(int i=n; i >= 1; i--) {
-        cout << i << endl;
+        if(i==1) {
+            cout << i;
+            break;
+        }
+        cout << i << " ";
     }
 }

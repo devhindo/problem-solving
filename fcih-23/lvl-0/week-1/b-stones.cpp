@@ -3,9 +3,9 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    if(n % 2 == 0) {
-        cout << 
-    } else {
-
+    if(n == 1) {
+        cout << "1"; 
+    } else { 
+        cout << "2";
     }
 }

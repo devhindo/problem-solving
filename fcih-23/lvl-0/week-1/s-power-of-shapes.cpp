@@ -7,12 +7,9 @@ int main() {
     a = a*4;
     b = b*3;
     c = atan(1)*4*2*c;
-    double biggest = max(a,max(b,c));
-    if(biggest == a) {
-        cout << "Square " << biggest;
-    } else if(biggest == b) {
-        cout << "Triangle " << biggest;
-    } else {
-        cout << "Circle " << biggest;
-    }
-}
+    multimap<double, string> m = {{a,"Square"},{b,"Triangle"},{c,"Circle"}};
+    double o;
+    double p = modf(m.begin()->first, &o);
+    if(p) cout << m.begin()->second << " " << fixed << setprecision(2) << m.begin()->first;
+     else cout << m.begin()->second << " " << m.begin()->first;
+} 
